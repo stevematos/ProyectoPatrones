@@ -15,7 +15,6 @@
     </head>
     <body>
         <div class="col-md-4 col-md-offset-4" id="login-form">
-            <div class="col-md-6 col-md-offset-3">
                 <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"/>
                 <select id="tipo-usuario-combobox" class="form-control" >
                     <option>TIPO USUARIO</option>
@@ -23,7 +22,6 @@
                 <input type="text" id="usuario-input" class="form-control" name="username" placeholder="Usuario" required="" autofocus="" />
                 <input type="password" id="contrasenia-input" class="form-control" name="password" placeholder="Contraseña" required=""/> 
                 <button class="btn btn-lg btn-primary btn-block" type="submit">INGRESAR</button>
-            </div>
         </div>
     </body>
 </html>
