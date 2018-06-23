@@ -15,21 +15,14 @@
     </head>
     <body>
         <div id="contenedor_total">
-            <div class="row">
-                <div class="col-md-4">
-                    <button>Home</button>
-                    <label>tipo_usuario</label>
-                </div>
-                <div class="col-md-4 col-md-offset-4">
-                    <label>usuario</label>
-                    <img src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"/> 
-                </div>
-            </div>
-            <hr>
-            <div id="Banner">
+            <jsp:include page="../componentes/header.jsp" flush="true">
+                <jsp:param name="usuario" value="Steve" />
+                <jsp:param name="tipo_usuario" value="Alumno_Prueba" />
+            </jsp:include>
+            <div class="row" id="Banner">
                 <h1>DATOS DE USUARIO</h1>
             </div>
-            <div id="Opciones">
+            <div class="row" id="Opciones">
                 <div class="row">
                     <div class="col-md-6">
                         <button>Historial de ventas</button>
