@@ -1,0 +1,34 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22/06/2018, 07:16:36 PM
+    Author     : VIDEOTECA
+*/
+
+#profile-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tipo-usuario-combobox{
+    display: block;
+    margin: 1.6em auto; 
+}
+
+#usuario-input{
+    margin: 1.6em auto;
+}
+
+#contrasenia-input{
+    margin: 1.6em auto;
+}
+
+#login-form{
+    padding:auto;
+    margin-top: 10%;
+}
+
