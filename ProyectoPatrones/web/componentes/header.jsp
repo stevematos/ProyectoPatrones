@@ -5,13 +5,21 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="../css/componentesCss/header.css" rel="stylesheet" type="text/css">
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<div class="row">
+    <div class="row" id="header">
+        <div class="col-md-4" id="home_tipousuario">
+            <button id="boton_header">Home</button>
+            <label>${param.tipo_usuario}</label>
+        </div>
+        <div class="col-md-2 col-md-offset-4" id="usuario">
+            <label>${param.usuario}</label>
+        </div>
+        <div class="col-md-2" id="imagen">
+            <img class="img-rounded" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"/> 
+        </div>
+    </div>
+    <hr>
+</div>
