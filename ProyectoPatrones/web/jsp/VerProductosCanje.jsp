@@ -13,8 +13,8 @@
     </head>
     <body>
 
-        <%@ include file="./vistamenu.jsp" %>
-        <jsp:include page="./vistamenu.jsp" flush="true" />.
+        <%//@ include file="./vistamenu.jsp" %>
+        <jsp:include page="./vistamenu.jsp" flush="true" />
 
         <h1>Productos Disponible para Canje</h1>
         <br>
