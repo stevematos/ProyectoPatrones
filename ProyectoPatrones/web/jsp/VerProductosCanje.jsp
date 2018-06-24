@@ -12,6 +12,21 @@
         <title>JSP Page</title>
     </head>
     <body>
+
+        <%@ include file="./vistamenu.jsp" %>
+        <jsp:include page="./vistamenu.jsp" flush="true" />.
+
         <h1>Productos Disponible para Canje</h1>
+        <br>
+        <table>
+            <tr>
+                <th>PRODUCTOS</th>
+                <th>PUNTOS REQUERIDOS</th>
+            </tr>
+            <tr>
+                <td>TEXT 1</td>
+                <td>TEXT 2</td>
+            </tr>
+        </table>
     </body>
 </html>
