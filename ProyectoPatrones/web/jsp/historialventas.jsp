@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/historialventas.css" rel="stylesheet" type="text/css">
-        <title>JSP Page</title>
+        <title>Historial de Ventas</title>
     </head>
     <body>
         <div id="contenedor_total">

@@ -12,7 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="../css/vistamenu.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" src="../js/funciones_predeterminadas.js"></script>
-        <title>JSP Page</title>
+        <title>Menu Principal</title>
     </head>
     <body>
         <div id="contenedor_total">
@@ -37,15 +37,15 @@
                         <button onclick="handleClickHref('transaccioncanje');">Transacciones de canje</button>
                     </div>
                     <div class="col-md-6">
-                        <button>Gestionar Canje</button>
+                        <button onclick="handleClickHref('GestionarProductoCanje')">Gestionar Canje</button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <button>Ver Productos Canje</button>
+                        <button onclick="handleClickHref('VerProductosCanje')">Ver Productos Canje</button>
                     </div>
                     <div class="col-md-6">
-                        <button>Gestionar Usuarios</button>
+                        <button onclick="handleClickHref('GestionarUsuarios')">Gestionar Usuarios</button>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/transaccioncanje.css" rel="stylesheet" type="text/css">
-        <title>JSP Page</title>
+        <script type="text/javascript" src="../js/funciones_predeterminadas.js"></script>
+        <title>Transaccion de Canje</title>
     </head>
     <body>
         <div id="contenedor_total">
@@ -78,7 +79,7 @@
                     <input type="text" class="form-control" name="username" required="" >
                 </div>
                 <div class="col-md-2 col-md-offset-3">
-                    <button>CANJEAR</button>
+                    <button onclick="handleClickHref('canjeproductos')">CANJEAR</button>
                 </div>
                 <div class="col-md-2 col-md-offset-1">
                     <button>CANCELAR</button>
