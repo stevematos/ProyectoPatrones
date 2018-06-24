@@ -14,6 +14,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <form action="vistamenu.jsp">
         <div class="col-md-4 col-md-offset-4" id="login-form">
                 <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"/>
                 <select id="tipo-usuario-combobox" class="form-control" >
@@ -23,5 +24,6 @@
                 <input type="password" id="contrasenia-input" class="form-control" name="password" placeholder="Contraseña" required=""/> 
                 <button class="btn btn-lg btn-primary btn-block" type="submit">INGRESAR</button>
         </div>
+        </form>
     </body>
 </html>

@@ -11,6 +11,7 @@
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="../css/vistamenu.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="../js/funciones_predeterminadas.js"></script>
         <title>JSP Page</title>
     </head>
     <body>
@@ -25,7 +26,7 @@
             <div class="row" id="Opciones">
                 <div class="row">
                     <div class="col-md-6">
-                        <button>Historial de ventas</button>
+                        <button onclick="handleClickHref('historialventas');">Historial de ventas</button>
                     </div>
                     <div class="col-md-6">
                         <button>Transacciones de Ventas</button>
@@ -33,7 +34,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <button>Transacciones de canje</button>
+                        <button onclick="handleClickHref('transaccioncanje');">Transacciones de canje</button>
                     </div>
                     <div class="col-md-6">
                         <button>Gestionar Canje</button>
