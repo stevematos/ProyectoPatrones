@@ -1,6 +1,6 @@
 <%-- 
-    Document   : EliminarCanje
-    Created on : 23/06/2018, 11:01:22 PM
+    Document   : EliminarUsuario
+    Created on : 23/06/2018, 11:33:45 PM
     Author     : JuniorPC
 --%>
 
@@ -13,20 +13,18 @@
     </head>
     <body>
         <jsp:include page="./vistamenu.jsp" flush="true" />
-        <h1>Eliminar Productos de Canje</h1>
+        <h1>Eliminar Usuario</h1>
         <br>
         <table>
             <tr>
                 <th>¿ELIMINAR?</th>
-                <th>CODIGO</th>
-                <th>NOMBRE</th>
-                <th>PUNTOS REQUERIDOS</th>
+                <th>NOMBRES</th>
+                <th>CARGO</th>
             </tr>
             <tr>
                 <td><!-- Aqui va el checkbox--></td>
-                <td><!-- Aqui va el codigo--></td>
                 <td><!-- Aqui va el nombre--></td>
-                <td><!-- Aqui va los puntos--></td>
+                <td><!-- Aqui va el cargo--></td>
             </tr>
         </table>
         <form>
