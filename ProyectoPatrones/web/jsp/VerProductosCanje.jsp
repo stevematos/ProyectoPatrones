@@ -8,10 +8,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <link href="../css/VerProductosCanje.css" rel="stylesheet" type="text/css">
+        <title>Productos en canje</title>
     </head>
-    <body>
+    <body style="margin:20px;padding:20px">
 
         <%//@ include file="./vistamenu.jsp" %>
         <jsp:include page="../componentes/header.jsp" flush="true">
@@ -19,17 +21,23 @@
             <jsp:param name="tipo_usuario" value="Alumno_Prueba" />
         </jsp:include>
 
-        <h1>Productos Disponible para Canje</h1>
+        <h1><b>PRODUCTOS DISPONIBLES PARA CANJE</b></h1>
         <br>
-        <table>
-            <tr>
-                <th>PRODUCTOS</th>
-                <th>PUNTOS REQUERIDOS</th>
-            </tr>
-            <tr>
-                <td>TEXT 1</td>
-                <td>TEXT 2</td>
-            </tr>
-        </table>
+        <br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <table>
+                    <tr>
+                        <th>PRODUCTOS</th>
+                        <th>PUNTOS REQUERIDOS</th>
+                    </tr>
+                    <tr>
+                        <td>TEXT 1</td>
+                        <td>TEXT 2</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </body>
 </html>
