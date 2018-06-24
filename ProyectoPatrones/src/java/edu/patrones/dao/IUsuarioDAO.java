@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hola;
+package edu.patrones.dao;
+
+import edu.patrones.model.Usuario;
+import javax.ejb.Local;
 
 /**
  *
- * @author Steve
+ * @author Jhunior Cuadros
  */
-public class hola {
+@Local
+public interface IUsuarioDAO extends IDAO<Usuario>{
     
 }
