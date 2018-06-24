@@ -28,7 +28,7 @@
                                                       alt="Agregar Canje"><br>Agregar Canje</a>
                 </div>
                 <div class="col-md-4" align="center">
-                    <<a href="./ModificarCanje.jsp"><img class="imagen"
+                    <a href="./ModificarCanje.jsp"><img class="imagen"
                                                          src="https://png.icons8.com/metro/1600/create-new.png"
                                                          alt="Modificar Canje"><br>Modificar Canje</a>
                 </div>
