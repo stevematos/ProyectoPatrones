@@ -14,7 +14,10 @@
     <body>
 
         <%//@ include file="./vistamenu.jsp" %>
-        <jsp:include page="./vistamenu.jsp" flush="true" />
+        <jsp:include page="../componentes/header.jsp" flush="true">
+            <jsp:param name="usuario" value="Steve" />
+            <jsp:param name="tipo_usuario" value="Alumno_Prueba" />
+        </jsp:include>
 
         <h1>Productos Disponible para Canje</h1>
         <br>

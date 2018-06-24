@@ -12,7 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <jsp:include page="./vistamenu.jsp" flush="true" />
+        <jsp:include page="../componentes/header.jsp" flush="true">
+            <jsp:param name="usuario" value="Steve" />
+            <jsp:param name="tipo_usuario" value="Alumno_Prueba" />
+        </jsp:include>
         <h1>Agregar Usuario</h1>
         <br>
         <form>
