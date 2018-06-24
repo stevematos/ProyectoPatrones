@@ -13,7 +13,7 @@ and open the template in the editor.
     align-items: flex-end;
 }
 
-label{
+#header label{
     margin-bottom: 0;
     font-size: 1.6em;
 }
