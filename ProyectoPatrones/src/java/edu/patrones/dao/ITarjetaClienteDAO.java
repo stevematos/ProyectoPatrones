@@ -3,12 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hola;
+package edu.patrones.dao;
 
-/**
- *
- * @author Steve
- */
-public class hola {
+import edu.patrones.model.TarjetaCliente;
+
+public interface ITarjetaClienteDAO extends IDAO<TarjetaCliente>{
     
 }
