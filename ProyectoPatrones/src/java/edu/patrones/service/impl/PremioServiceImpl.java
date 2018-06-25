@@ -10,17 +10,9 @@ import edu.patrones.model.Premio;
 import edu.patrones.service.IPremioService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class PremioServiceImpl implements IPremioService, Serializable{
 
-    @EJB
     private IPremioDAO dao;
     
     @Override

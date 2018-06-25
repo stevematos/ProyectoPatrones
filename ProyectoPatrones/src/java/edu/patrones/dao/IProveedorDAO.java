@@ -6,13 +6,7 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.Proveedor;
-import javax.ejb.Local;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Local
 public interface IProveedorDAO extends IDAO<Proveedor>{
     
 }

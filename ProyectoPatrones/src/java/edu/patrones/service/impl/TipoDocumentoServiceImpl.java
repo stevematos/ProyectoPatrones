@@ -10,17 +10,9 @@ import edu.patrones.model.TipoDocumento;
 import edu.patrones.service.ITipoDocumentoService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class TipoDocumentoServiceImpl implements ITipoDocumentoService, Serializable{
 
-    @EJB
     private ITipoDocumentoDAO dao;
     
     @Override

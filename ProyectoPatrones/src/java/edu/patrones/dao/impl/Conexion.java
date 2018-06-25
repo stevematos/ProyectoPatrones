@@ -11,7 +11,6 @@ public class Conexion {
     private static Conexion instance;
 
     private Conexion() {
-
     }
 
     public static Connection getInstance() {

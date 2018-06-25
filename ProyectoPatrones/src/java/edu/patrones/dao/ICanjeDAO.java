@@ -6,13 +6,7 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.Canje;
-import javax.ejb.Local;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Local
 public interface ICanjeDAO extends IDAO<Canje>{
     
 }

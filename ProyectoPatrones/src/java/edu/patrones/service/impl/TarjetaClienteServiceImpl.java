@@ -10,17 +10,9 @@ import edu.patrones.model.TarjetaCliente;
 import edu.patrones.service.ITarjetaClienteService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class TarjetaClienteServiceImpl implements ITarjetaClienteService, Serializable{
 
-    @EJB
     private ITarjetaClienteDAO dao;
     
     @Override

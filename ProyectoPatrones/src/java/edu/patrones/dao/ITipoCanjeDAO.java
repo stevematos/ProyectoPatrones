@@ -6,13 +6,7 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.TipoCanje;
-import javax.ejb.Local;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Local
 public interface ITipoCanjeDAO extends IDAO<TipoCanje>{
     
 }

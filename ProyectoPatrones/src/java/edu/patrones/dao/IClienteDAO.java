@@ -6,13 +6,7 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.Cliente;
-import javax.ejb.Local;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Local
 public interface IClienteDAO extends IDAO<Cliente>{
     
 }

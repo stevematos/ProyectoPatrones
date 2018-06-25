@@ -6,13 +6,7 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.TipoDocumento;
-import javax.ejb.Local;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Local
 public interface ITipoDocumentoDAO extends IDAO<TipoDocumento>{
     
 }

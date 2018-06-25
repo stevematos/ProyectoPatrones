@@ -6,13 +6,7 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.Personal;
-import javax.ejb.Local;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Local
 public interface IPersonalDAO extends IDAO<Personal>{
     
 }

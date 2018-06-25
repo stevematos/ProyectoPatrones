@@ -10,17 +10,9 @@ import edu.patrones.model.Cargo;
 import edu.patrones.service.ICargoService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class CargoServiceImpl implements ICargoService, Serializable{
 
-    @EJB
     private ICargoDAO dao;
     
     @Override

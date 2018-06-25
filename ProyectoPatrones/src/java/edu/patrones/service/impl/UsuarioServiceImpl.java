@@ -10,17 +10,9 @@ import edu.patrones.model.Usuario;
 import edu.patrones.service.IUsuarioService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class UsuarioServiceImpl implements IUsuarioService, Serializable{
 
-    @EJB
     private IUsuarioDAO dao;
     
     @Override

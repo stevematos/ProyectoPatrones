@@ -10,17 +10,9 @@ import edu.patrones.model.Cliente;
 import edu.patrones.service.IClienteService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class ClienteServiceImpl implements IClienteService, Serializable{
 
-    @EJB
     private IClienteDAO dao;
     
     @Override

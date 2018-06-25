@@ -14,13 +14,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import javax.ejb.Stateless;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Stateless
 public class TarjetaDAOImpl implements ITarjetaDAO, Serializable {
 
 	private Connection cx;

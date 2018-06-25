@@ -6,13 +6,7 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.Cargo;
-import javax.ejb.Local;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Local
 public interface ICargoDAO extends IDAO<Cargo>{
     
 }

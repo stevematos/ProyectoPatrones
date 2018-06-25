@@ -10,17 +10,9 @@ import edu.patrones.model.PerfilUsuario;
 import edu.patrones.service.IPerfilUsuarioService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class PerfilUsuarioServiceImpl implements IPerfilUsuarioService, Serializable{
 
-    @EJB
     private IPerfilUsuarioDAO dao;
     
     @Override

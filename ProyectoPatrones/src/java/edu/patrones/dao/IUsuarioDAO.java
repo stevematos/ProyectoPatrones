@@ -6,13 +6,7 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.Usuario;
-import javax.ejb.Local;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Local
 public interface IUsuarioDAO extends IDAO<Usuario>{
     
 }

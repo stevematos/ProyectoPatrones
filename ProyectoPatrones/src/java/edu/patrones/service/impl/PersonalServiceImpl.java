@@ -10,17 +10,9 @@ import edu.patrones.model.Personal;
 import edu.patrones.service.IPersonalService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class PersonalServiceImpl implements IPersonalService, Serializable{
 
-    @EJB
     private IPersonalDAO dao;
     
     @Override

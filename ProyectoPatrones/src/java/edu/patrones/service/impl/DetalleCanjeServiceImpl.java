@@ -10,17 +10,9 @@ import edu.patrones.model.DetalleCanje;
 import edu.patrones.service.IDetalleCanjeService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class DetalleCanjeServiceImpl implements IDetalleCanjeService, Serializable{
 
-    @EJB
     private IDetalleCanjeDAO dao;
     
     @Override

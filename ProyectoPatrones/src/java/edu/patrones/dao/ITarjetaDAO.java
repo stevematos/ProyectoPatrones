@@ -6,13 +6,7 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.Tarjeta;
-import javax.ejb.Local;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Local
 public interface ITarjetaDAO extends IDAO<Tarjeta>{
     
 }

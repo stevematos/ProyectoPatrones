@@ -10,17 +10,9 @@ import edu.patrones.model.Canje;
 import edu.patrones.service.ICanjeService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class CanjeServiceImpl implements ICanjeService, Serializable{
 
-    @EJB
     private ICanjeDAO dao;
     
     @Override

@@ -6,13 +6,7 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.Premio;
-import javax.ejb.Local;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Local
 public interface IPremioDAO extends IDAO<Premio>{
     
 }

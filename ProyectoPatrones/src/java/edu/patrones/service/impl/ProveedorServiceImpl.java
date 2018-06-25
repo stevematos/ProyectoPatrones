@@ -10,17 +10,9 @@ import edu.patrones.model.Proveedor;
 import edu.patrones.service.IProveedorService;
 import java.io.Serializable;
 import java.util.List;
-import javax.ejb.EJB;
-import javax.inject.Named;
 
-/**
- *
- * @author Jhunior Cuadros
- */
-@Named
 public class ProveedorServiceImpl implements IProveedorService, Serializable{
 
-    @EJB
     private IProveedorDAO dao;
     
     @Override
