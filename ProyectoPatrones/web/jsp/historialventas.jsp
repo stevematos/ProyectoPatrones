@@ -11,6 +11,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/historialventas.css" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="../js/moment.min.js"></script>
+         <script src="../js/bootstrap-datetimepicker.min.js"></script>
+         <script src="../js/bootstrap-datetimepicker.es.js"></script>
+         <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css">
         <title>Historial de Ventas</title>
     </head>
     <body>
@@ -24,9 +29,11 @@
             </div>
             <div class="row">
                 <div class="col-md-2"  id="calendario">
-                    <select  class="form-control">
-                        <option>CALENDARIO</option>
-                    </select>
+                    <div class='input-group date' id='divMiCalendario'>
+                      <input type='text' id="txtFecha" class="form-control"  readonly/>
+                      <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
                 </div>
                 <div class="col-md-2 col-md-offset-1">
                     <button>CONSULTAR</button>
@@ -52,5 +59,11 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+           $('#divMiCalendario').datetimepicker({
+                format: 'YYYY-MM-DD'       
+            });
+            $('#divMiCalendario').data("DateTimePicker").show();
+         </script>
     </body>
 </html>

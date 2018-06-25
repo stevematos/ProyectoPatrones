@@ -90,7 +90,7 @@
                  
                 
                  <div class="col-md-2 col-md-offset-3">
-                    <button >GENERAR DESCUENTO</button>
+                    <button onclick="handleClickHref('Pago');">GENERAR DESCUENTO</button>
                 </div>
                 
                 <div class="col-md-2 col-md-offset-3">

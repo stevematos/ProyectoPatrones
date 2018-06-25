@@ -88,7 +88,7 @@
             </div>
             <div class="row">
                  <div class="col-md-2 ">
-                    <button >REALIZAR PAGO</button>
+                    <button onclick="handleClickHref('TransaccionVentas');">REALIZAR PAGO</button>
                 </div>
 
                 

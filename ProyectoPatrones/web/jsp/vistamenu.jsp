@@ -29,7 +29,7 @@
                         <button onclick="handleClickHref('historialventas');">Historial de ventas</button>
                     </div>
                     <div class="col-md-6">
-                        <button>Transacciones de Ventas</button>
+                        <button onclick="handleClickHref('TransaccionVentas');">Transacciones de Ventas</button>
                     </div>
                 </div>
                 <div class="row">

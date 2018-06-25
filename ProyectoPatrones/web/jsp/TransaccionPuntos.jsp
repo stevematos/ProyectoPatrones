@@ -88,10 +88,10 @@
             </div>
             <div class="row">
                  <div class="col-md-2 ">
-                    <button >TRANSACCION CON DESCUENTO</button>
+                    <button onclick="handleClickHref('TransaccionDescuento');">TRANSACCION CON DESCUENTO</button>
                 </div>
                  <div class="col-md-2 col-md-offset-3">
-                    <button >PAGO CON PUNTOS</button>
+                    <button onclick="handleClickHref('PagoPuntos');">PAGO CON PUNTOS</button>
                 </div>
                 
                 <div class="col-md-2 col-md-offset-3">

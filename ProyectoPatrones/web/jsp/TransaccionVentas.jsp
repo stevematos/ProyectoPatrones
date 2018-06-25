@@ -70,7 +70,7 @@
                     <button >PAGO NORMAL</button>
                 </div>
                 <div class="col-md-2 col-md-offset-1">
-                    <button>TRANSACCION CON PUNTOS</button>
+                    <button onclick="handleClickHref('TransaccionPuntos');">TRANSACCION CON PUNTOS</button>
                 </div>
             </div>
         </div>
