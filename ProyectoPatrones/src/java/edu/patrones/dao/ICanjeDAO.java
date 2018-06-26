@@ -6,7 +6,9 @@
 package edu.patrones.dao;
 
 import edu.patrones.model.Canje;
+import java.sql.Date;
+import java.util.List;
 
 public interface ICanjeDAO extends IDAO<Canje>{
-    
+    public List<Canje> listarPorFecha(Date fecha);
 }

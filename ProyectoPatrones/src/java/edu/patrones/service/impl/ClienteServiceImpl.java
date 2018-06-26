@@ -6,6 +6,7 @@
 package edu.patrones.service.impl;
 
 import edu.patrones.dao.IClienteDAO;
+import edu.patrones.dao.impl.ClienteDAOImpl;
 import edu.patrones.model.Cliente;
 import edu.patrones.service.IClienteService;
 import java.io.Serializable;
@@ -14,6 +15,10 @@ import java.util.List;
 public class ClienteServiceImpl implements IClienteService, Serializable{
 
     private IClienteDAO dao;
+
+    public ClienteServiceImpl() {
+        dao=new ClienteDAOImpl();
+    }
     
     @Override
     public void agregar(Cliente t) throws Exception {

@@ -6,6 +6,8 @@
 package edu.patrones.service;
 
 import edu.patrones.model.Canje;
+import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -13,4 +15,5 @@ import edu.patrones.model.Canje;
  */
 public interface ICanjeService extends IService<Canje>{
     
+    public List<Canje> getCanjeFecha(Date fecha) throws Exception;
 }

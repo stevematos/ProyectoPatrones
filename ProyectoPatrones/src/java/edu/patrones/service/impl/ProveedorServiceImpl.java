@@ -6,6 +6,7 @@
 package edu.patrones.service.impl;
 
 import edu.patrones.dao.IProveedorDAO;
+import edu.patrones.dao.impl.ProveedorDAOImpl;
 import edu.patrones.model.Proveedor;
 import edu.patrones.service.IProveedorService;
 import java.io.Serializable;
@@ -14,6 +15,10 @@ import java.util.List;
 public class ProveedorServiceImpl implements IProveedorService, Serializable{
 
     private IProveedorDAO dao;
+
+    public ProveedorServiceImpl() {
+        dao=new ProveedorDAOImpl();
+    }
     
     @Override
     public void agregar(Proveedor t) throws Exception {

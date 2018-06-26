@@ -6,6 +6,7 @@
 package edu.patrones.service.impl;
 
 import edu.patrones.dao.ICargoDAO;
+import edu.patrones.dao.impl.CargoDAOImpl;
 import edu.patrones.model.Cargo;
 import edu.patrones.service.ICargoService;
 import java.io.Serializable;
@@ -14,6 +15,10 @@ import java.util.List;
 public class CargoServiceImpl implements ICargoService, Serializable{
 
     private ICargoDAO dao;
+
+    public CargoServiceImpl() {
+        dao=new CargoDAOImpl();
+    }
     
     @Override
     public void agregar(Cargo t) throws Exception {

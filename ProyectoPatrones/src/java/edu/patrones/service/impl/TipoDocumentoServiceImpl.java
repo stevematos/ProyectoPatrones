@@ -6,6 +6,7 @@
 package edu.patrones.service.impl;
 
 import edu.patrones.dao.ITipoDocumentoDAO;
+import edu.patrones.dao.impl.TipoDocumentoDAOImpl;
 import edu.patrones.model.TipoDocumento;
 import edu.patrones.service.ITipoDocumentoService;
 import java.io.Serializable;
@@ -14,6 +15,10 @@ import java.util.List;
 public class TipoDocumentoServiceImpl implements ITipoDocumentoService, Serializable{
 
     private ITipoDocumentoDAO dao;
+
+    public TipoDocumentoServiceImpl() {
+        dao=new TipoDocumentoDAOImpl();
+    }
     
     @Override
     public void agregar(TipoDocumento t) throws Exception {

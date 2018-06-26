@@ -6,14 +6,20 @@
 package edu.patrones.service.impl;
 
 import edu.patrones.dao.ICanjeDAO;
+import edu.patrones.dao.impl.CanjeDAOImpl;
 import edu.patrones.model.Canje;
 import edu.patrones.service.ICanjeService;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 public class CanjeServiceImpl implements ICanjeService, Serializable{
 
     private ICanjeDAO dao;
+
+    public CanjeServiceImpl() {
+        dao=new CanjeDAOImpl();
+    }
     
     @Override
     public void agregar(Canje t) throws Exception {
@@ -39,5 +45,14 @@ public class CanjeServiceImpl implements ICanjeService, Serializable{
     public Canje listarPorId(String id) throws Exception {
         return dao.listarPorId(id);
     }
+
+    @Override
+    public List<Canje> getCanjeFecha(Date fecha) throws Exception {
+        System.out.println(fecha);
+        java.sql.Date fechaSql = new java.sql.Date(fecha.getTime());
+        System.out.println(fechaSql);
+        return dao.listarPorFecha(fechaSql);
+    }
+    
     
 }

@@ -6,6 +6,7 @@
 package edu.patrones.service.impl;
 
 import edu.patrones.dao.IPerfilUsuarioDAO;
+import edu.patrones.dao.impl.PerfilUsuarioDAOImpl;
 import edu.patrones.model.PerfilUsuario;
 import edu.patrones.service.IPerfilUsuarioService;
 import java.io.Serializable;
@@ -14,6 +15,10 @@ import java.util.List;
 public class PerfilUsuarioServiceImpl implements IPerfilUsuarioService, Serializable{
 
     private IPerfilUsuarioDAO dao;
+
+    public PerfilUsuarioServiceImpl() {
+        dao=new PerfilUsuarioDAOImpl();
+    }
     
     @Override
     public void agregar(PerfilUsuario t) throws Exception {

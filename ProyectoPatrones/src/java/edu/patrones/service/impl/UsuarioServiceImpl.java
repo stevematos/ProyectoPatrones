@@ -6,6 +6,7 @@
 package edu.patrones.service.impl;
 
 import edu.patrones.dao.IUsuarioDAO;
+import edu.patrones.dao.impl.UsuarioDAOImpl;
 import edu.patrones.model.Usuario;
 import edu.patrones.service.IUsuarioService;
 import java.io.Serializable;
@@ -14,6 +15,10 @@ import java.util.List;
 public class UsuarioServiceImpl implements IUsuarioService, Serializable{
 
     private IUsuarioDAO dao;
+
+    public UsuarioServiceImpl() {
+        dao=new UsuarioDAOImpl();
+    }
     
     @Override
     public void agregar(Usuario t) throws Exception {

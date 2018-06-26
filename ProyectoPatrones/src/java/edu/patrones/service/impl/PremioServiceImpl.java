@@ -6,6 +6,7 @@
 package edu.patrones.service.impl;
 
 import edu.patrones.dao.IPremioDAO;
+import edu.patrones.dao.impl.PremioDAOImpl;
 import edu.patrones.model.Premio;
 import edu.patrones.service.IPremioService;
 import java.io.Serializable;
@@ -14,6 +15,10 @@ import java.util.List;
 public class PremioServiceImpl implements IPremioService, Serializable{
 
     private IPremioDAO dao;
+
+    public PremioServiceImpl() {
+        dao=new PremioDAOImpl();
+    }
     
     @Override
     public void agregar(Premio t) throws Exception {

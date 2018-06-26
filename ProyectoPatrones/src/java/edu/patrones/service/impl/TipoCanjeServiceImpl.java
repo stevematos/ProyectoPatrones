@@ -6,6 +6,7 @@
 package edu.patrones.service.impl;
 
 import edu.patrones.dao.ITipoCanjeDAO;
+import edu.patrones.dao.impl.TipoCanjeDAOImpl;
 import edu.patrones.model.TipoCanje;
 import edu.patrones.service.ITipoCanjeService;
 import java.io.Serializable;
@@ -14,6 +15,10 @@ import java.util.List;
 public class TipoCanjeServiceImpl implements ITipoCanjeService, Serializable{
 
     private ITipoCanjeDAO dao;
+
+    public TipoCanjeServiceImpl() {
+        dao=new TipoCanjeDAOImpl();
+    }
     
     @Override
     public void agregar(TipoCanje t) throws Exception {

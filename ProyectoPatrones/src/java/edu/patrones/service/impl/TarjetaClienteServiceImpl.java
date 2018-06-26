@@ -6,6 +6,7 @@
 package edu.patrones.service.impl;
 
 import edu.patrones.dao.ITarjetaClienteDAO;
+import edu.patrones.dao.impl.TarjetaClienteDAOImpl;
 import edu.patrones.model.TarjetaCliente;
 import edu.patrones.service.ITarjetaClienteService;
 import java.io.Serializable;
@@ -14,6 +15,10 @@ import java.util.List;
 public class TarjetaClienteServiceImpl implements ITarjetaClienteService, Serializable{
 
     private ITarjetaClienteDAO dao;
+
+    public TarjetaClienteServiceImpl() {
+        dao=new TarjetaClienteDAOImpl();
+    }
     
     @Override
     public void agregar(TarjetaCliente t) throws Exception {
