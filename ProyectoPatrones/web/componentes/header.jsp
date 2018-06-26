@@ -3,7 +3,11 @@
     Created on : 23/06/2018, 04:08:10 PM
     Author     : Steve
 --%>
-
+<%
+	
+        String nombre = (String) session.getAttribute("nombre_usuario");
+        String perfil = (String) session.getAttribute("perfil_usuario");
+	%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,10 +21,10 @@
             <div class="row" id="header">
                 <div class="col-md-4" id="home_tipousuario">
                     <button id="boton_header" onclick="handleClickHref('login')">Home</button>
-                    <label>${param.tipo_usuario}</label>
+                    <label><%=perfil%></label>
                 </div>
                 <div class="col-md-2 col-md-offset-4" id="usuario">
-                    <label>${param.usuario}</label>
+                    <label><%=nombre%></label>
                 </div>
                 <div class="col-md-2" id="imagen">
                     <img class="img-rounded" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"/> 

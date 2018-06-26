@@ -17,8 +17,11 @@ public class PerfilUsuarioServiceImpl implements IPerfilUsuarioService, Serializ
     private IPerfilUsuarioDAO dao;
 
     public PerfilUsuarioServiceImpl() {
-        dao=new PerfilUsuarioDAOImpl();
+        
+        dao= new PerfilUsuarioDAOImpl();
     }
+    
+    
     
     @Override
     public void agregar(PerfilUsuario t) throws Exception {

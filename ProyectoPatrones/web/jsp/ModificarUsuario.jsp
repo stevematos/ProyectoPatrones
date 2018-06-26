@@ -26,14 +26,12 @@
             <div class="col-md-10">
                 <table>
                     <tr>
-                        <th>DNI</th>
                         <th>NOMBRE</th>
-                        <th>APELLIDO PATERNO</th>
-                        <th>APELLIDO MATERNO</th>
-                        <th>CARGO</th>
+                        <th>PASSWORD</th>
+                        <th>PERFIL</th>
+                        <th>ESTADO</th>
                     </tr>
                     <tr>
-                        <td><!-- Aqui va--></td>
                         <td><!-- Aqui va--></td>
                         <td><!-- Aqui va--></td>
                         <td><!-- Aqui va--></td>
@@ -51,21 +49,32 @@
                     <input class="input-text" type="text" name="nombre-usuario" required placeholder="Ingrese el nombre del usuario">
                 </div>
                 <div class="col-md-4">
-                    <input class="input-text" type="text" name="apepat-usuario" required placeholder="Ingrese el apellido paterno">
+                    <input class="input-text" type="text" name="apepat-usuario" required placeholder="Ingrese el password">
                 </div>
+
                 <div class="col-md-4">
-                    <input class="input-text" type="text" name="apemat-usuario" required placeholder="Ingrese el apellido materno">
+                    <input class="input-text" type="text" name="cargo-usuario" required placeholder="Ingrese el perfil del usuario">
                 </div>
+
             </div>
+
             <br>
             <div class="row">
-                <div class="col-md-4">
-                    <input class="input-text" type="text" name="dni-usuario" required placeholder="Ingrese el DNI del usuario">
+                <div class="col-md-5">
                 </div>
-                <div class="col-md-4">
-                    <input class="input-text" type="text" name="cargo-usuario" required placeholder="Ingrese el cargo del usuario">
+                <div class="col-md-1">
+                    <label for="estado"> Estado </label>
+
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-1">
+                    <input class="input-text" type="checkbox" name="cargo-usuario" >
+
+                </div>
+            </div>
+             <br>
+
+            <div class="row">
+                <div class="col-md-5">
                 </div>
                 <div class="col-md-2">
                     <input class="input-text" type="submit" value="Modificar">

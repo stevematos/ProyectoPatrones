@@ -116,5 +116,29 @@ public class UsuarioDAOImpl implements IUsuarioDAO, Serializable {
 		}
 		return usuario;
 	}
+        
+        @Override
+	public Usuario ValidarUsuario(String nombre, String contraseña) {
+		Usuario usuario = new Usuario();
+		try {
+			String query = "SELECT * FROM USUARIO WHERE nom_usuario =? AND clve_usuario=?";
+			PreparedStatement preparedStatement = cx.prepareStatement(query);
+			preparedStatement.setString(1, nombre);
+                        preparedStatement.setString(2, contraseña);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				usuario.setUsuarioId(resultSet.getString("usuario_id"));
+                                usuario.setPerfilId(resultSet.getString("perfil_id"));
+				usuario.setNomUsuario(resultSet.getString("nom_usuario"));
+                                usuario.setClveUsuario(resultSet.getString("clve_usuario"));
+                                usuario.setEstado(resultSet.getShort("estado"));
+			}
+			resultSet.close();
+			preparedStatement.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return usuario;
+	}
 
 }

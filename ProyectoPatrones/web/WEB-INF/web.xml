@@ -7,6 +7,20 @@
     <servlet-mapping>
         <servlet-name>ServletConsultaVentas</servlet-name>
         <url-pattern>/ServletConsultaVentas</url-pattern>
+        <servlet-name>ServletLogin</servlet-name>
+        <servlet-class>edu.patrones.controller.ServletLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletUsuario</servlet-name>
+        <servlet-class>edu.patrones.controller.ServletUsuario</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletLogin</servlet-name>
+        <url-pattern>/ServletLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletUsuario</servlet-name>
+        <url-pattern>/ServletUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

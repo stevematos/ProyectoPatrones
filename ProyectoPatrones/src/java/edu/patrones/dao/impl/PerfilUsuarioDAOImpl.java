@@ -41,7 +41,7 @@ public class PerfilUsuarioDAOImpl implements IPerfilUsuarioDAO, Serializable {
 	@Override
 	public void eliminar(String id) {
 		try {
-			String sql = "DELETE FROM PERFIL_USUARIO WHERE detalle_id = ?";
+			String sql = "DELETE FROM PERFIL_USUARIO WHERE perfil_id = ?";
 			PreparedStatement preparedStatement = cx.prepareStatement(sql);
 			preparedStatement.setString(1, id);
 			preparedStatement.executeUpdate();
@@ -92,7 +92,7 @@ public class PerfilUsuarioDAOImpl implements IPerfilUsuarioDAO, Serializable {
 	public PerfilUsuario listarPorId(String id) {
 		PerfilUsuario perfilUsuario = new PerfilUsuario();
 		try {
-			String query = "SELECT * FROM PERFIL_USUARIO WHERE detalle_id =?";
+			String query = "SELECT * FROM PERFIL_USUARIO WHERE perfil_id =?";
 			PreparedStatement preparedStatement = cx.prepareStatement(query);
 			preparedStatement.setString(1, id);
 			ResultSet resultSet = preparedStatement.executeQuery();
