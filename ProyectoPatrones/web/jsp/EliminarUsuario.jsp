@@ -26,11 +26,9 @@
             <div class="col-md-10">
                 <table>
                     <tr>
-                        <th>DNI</th>
                         <th>NOMBRE</th>
-                        <th>APELLIDO PATERNO</th>
-                        <th>APELLIDO MATERNO</th>
-                        <th>CARGO</th>
+                        
+                        <th>PERFIL</th>
                     </tr>
                     <tr>
                         <td><!-- Aqui va--></td>

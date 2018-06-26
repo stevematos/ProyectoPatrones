@@ -29,23 +29,7 @@
                         <button onclick="handleClickHref('historialventas');">Historial de ventas</button>
                     </div>
                     <div class="col-md-6">
-                        <button>Transacciones de Ventas</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <button onclick="handleClickHref('transaccioncanje');">Transacciones de canje</button>
-                    </div>
-                    <div class="col-md-6">
-                        <button onclick="handleClickHref('GestionarProductoCanje')">Gestionar Canje</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <button onclick="handleClickHref('VerProductosCanje')">Ver Productos Canje</button>
-                    </div>
-                    <div class="col-md-6">
-                        <button onclick="handleClickHref('GestionarUsuarios')">Gestionar Usuarios</button>
+                        <button onclick="handleClickHref('TransaccionVentas');">Transacciones de Ventas</button>
                     </div>
                 </div>
             </div>
