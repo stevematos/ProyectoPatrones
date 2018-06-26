@@ -20,9 +20,7 @@ import java.util.Date;
  */
 public class probando {
     public static void main(String[] args) throws Exception {
-            CanjeServiceImpl dao=new CanjeServiceImpl();
-            SimpleDateFormat dateformat3 = new SimpleDateFormat("dd/MM/yyyy");
-            Date date1 = dateformat3.parse("25/06/2018");
-            System.out.println(dao.getCanjeFecha(date1));
+            UsuarioServiceImpl dao=new UsuarioServiceImpl();
+            System.out.println(dao.listar());
     }
 }
