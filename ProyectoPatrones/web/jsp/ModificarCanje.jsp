@@ -29,11 +29,15 @@
                         <th>CODIGO</th>
                         <th>NOMBRE</th>
                         <th>PUNTOS REQUERIDOS</th>
+                        <th></th>
                     </tr>
                     <tr>
                         <td><!-- Aqui va el codigo--></td>
                         <td><!-- Aqui va el nombre--></td>
                         <td><!-- Aqui va los puntos--></td>
+                        <td>
+                            <a>Editar</a>
+                        </td>
                     </tr>
                 </table>
             </div>

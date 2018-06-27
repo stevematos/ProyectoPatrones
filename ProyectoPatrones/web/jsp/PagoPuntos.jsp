@@ -36,23 +36,9 @@
                 </div>
 
             </div>
-            <br>
             <div class="row">
                 <div class="col-md-2">
-                    <i>**1 punto == 1 céntimo**</i>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-md-2">
-                    <label>PUNTOS</label>
-                </div>
-                <div class="col-md-2">
-                    <input type="text" class="form-control" name="username" required="" >
-                </div>
-
-                <div class="col-md-2">
-                    <label>EQUIVALENCIA (S/.)</label>
+                    <label>PUNTOS ACTUALES</label>
                 </div>
                 <div class="col-md-2">
                     <input type="text" class="form-control" name="username" required="" >
@@ -65,19 +51,43 @@
                     <label>MONTO TOTAL</label>
                 </div>
                 <div class="col-md-2">
-                    <input type="text" class="form-control" name="username" required="" >
+                    <input type="text" class="form-control" name="username" required="" disabled placeholder="Total">
                 </div>
                 <div class="col-md-2">
                     <label>MONTO TOTAL CON PUNTOS</label>
                 </div>
                 <div class="col-md-2">
-                    <input type="text" class="form-control" name="username" required="" >
+                    <input type="text" class="form-control" name="username" required="" disabled placeholder="Total en puntos">
                 </div>
 
             </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-2">
+                    <i>**1 punto == 1 céntimo**</i>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2">
+                    <label>PUNTOS</label>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" name="username" required="" placeholder="Ingrese los puntos a canjear.">
+                </div>
+
+                <div class="col-md-2">
+                    <label>EQUIVALENCIA (S/.)</label>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" name="username" required="" >
+                </div>
+            </div>
+            
 
             <br>
-
+            <br>
             <div class="row">
                 <div class="col-md-2 ">
                     <button >REALIZAR PAGO</button>

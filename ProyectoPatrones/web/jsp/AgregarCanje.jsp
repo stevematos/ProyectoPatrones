@@ -23,9 +23,6 @@
         <br>
         <form>
             <div class="row">
-                <div class="col-md-3">
-                    <input class="input-text" type="text" name="codigo-producto" required placeholder="Ingrese el código del producto">
-                </div>
                 <div class="col-md-4">
                     <input class="input-text" type="text" name="nombre-producto" required placeholder="Ingrese el nombre del producto">
                 </div>
@@ -33,6 +30,22 @@
                     <input class="input-text" type="text" name="puntos-producto" required placeholder="Ingrese los puntos requeridos">
                 </div>
                 <div class="col-md-2">
+                    <input class="input-text" type="text" name="stock-producto" required placeholder="Ingrese el stock">
+                </div>
+                <div class="col-md-3">
+                    <select name="proveedor-producto" class="input-text">
+                        <option>Opción 1 - proveedor x</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <textarea class="input-text" rows="3" name="observacion-producto" placeholder="Ingrese las observaciones"></textarea>
+                </div>
+                <div class="col-md-3"></div>
+                <div class="col-md-2">
+                    <br>
                     <input class="input-text" type="submit" value="Agregar">
                 </div>
             </div>
@@ -45,14 +58,16 @@
             <div class="col-md-10">
                 <table>
                     <tr>
-                        <th>CODIGO</th>
-                        <th>NOMBRE</th>
-                        <th>PUNTOS REQUERIDOS</th>
+                        <th>NOMBRE DEL PRODUCTO</th>
+                        <th>PUNTOS</th>
+                        <th>STOCK</th>
+                        <th>PROVEEDOR</th>
                     </tr>
                     <tr>
                         <td><!-- Aqui va el codigo--></td>
                         <td><!-- Aqui va el nombre--></td>
                         <td><!-- Aqui va los puntos--></td>
+                        <td>info xdxd</td>
                     </tr>
                 </table>
             </div>
