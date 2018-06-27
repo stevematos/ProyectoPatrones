@@ -1,9 +1,10 @@
 -Patrons singleton :Base de datos
--Template: DAO
+-Template: en el DAO
 -DAO 
 -MVC: estructura del proyecto
 -composity : jsp:include
 -patron filter o de criterio
 -patron facade
 -patron adapter
--FrontController
+-FrontController 
+-Transfer Object Pattern
