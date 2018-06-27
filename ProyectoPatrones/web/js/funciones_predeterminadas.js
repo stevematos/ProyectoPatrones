@@ -19,3 +19,46 @@ function retroceder(paginas)
 {
     history.back(paginas);
 }
+
+//funciones ccopita xdxd
+function existeCliente(){
+    var checkCliente = document.getElementById("checkCliente");
+    
+    var nombre = document.getElementById("nombre");
+    var apepat = document.getElementById("apepat");
+    var apemat = document.getElementById("apemat");
+    var celular = document.getElementById("celular");
+    
+    if(checkCliente.checked == true){
+        nombre.disabled = true;
+        apepat.disabled = true;
+        apemat.disabled = true;
+        celular.disabled = true;
+    } else {
+        nombre.disabled = false;
+        apepat.disabled = false;
+        apemat.disabled = false;
+        celular.disabled = false;
+    }
+}
+
+function existeTarjeta(){
+    var checkCliente = document.getElementById("checkCliente");
+    
+    var nombre = document.getElementById("nombre");
+    var apepat = document.getElementById("apepat");
+    var apemat = document.getElementById("apemat");
+    var celular = document.getElementById("celular");
+    
+    if(checkCliente.checked == true){
+        nombre.disabled = true;
+        apepat.disabled = true;
+        apemat.disabled = true;
+        celular.disabled = true;
+    } else {
+        nombre.disabled = false;
+        apepat.disabled = false;
+        apemat.disabled = false;
+        celular.disabled = false;
+    }
+}
