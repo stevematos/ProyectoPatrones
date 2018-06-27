@@ -75,7 +75,7 @@
                             <td align="center"><%=nombreperfil%></td>
                             <td align="center"><%=Lista.get(i).getEstado()%></td>
                             <td>
-                                <a  href="../ServletActualizarUsuario?method=doPost&id="<%=id%>>
+                                <a  href="../ServletActualizarUsuario?method=doPost&id=<%=id%>"  >
                                 Editar
                                 </a>
                             </td>
