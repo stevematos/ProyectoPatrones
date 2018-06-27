@@ -24,24 +24,39 @@
         <br>
         <form action="../ServletAgregarCanje" method="GET">
             <div class="row">
-                <div class="col-md-2">
-                    <input class="input-text" type="text" name="codigo-producto" required placeholder="Ingrese el código del producto">
+                <div class="row">
+                    <div class="col-md-3">
+                        <input class="input-text" type="text" name="codigo-producto" required placeholder="Ingrese el código del producto">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="input-text" type="text" name="nombre-producto" required placeholder="Ingrese el nombre del producto">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="input-text" type="text" name="puntos-producto" required placeholder="Ingrese los puntos requeridos">
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <input class="input-text" type="text" name="nombre-producto" required placeholder="Ingrese el nombre del producto">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input class="input-text" type="text" name="imagen-producto" required placeholder="Ingrese la imagen del producto">
+                    </div>
+                    <div class="col-md-4">
+                        <input class="input-text" type="text" name="observacion-producto" required placeholder="Ingrese la observacion del producto(Fecha vencimiento)">
+                    </div>
+                    <div class="col-md-2">
+                        <input class="input-text" type="text" name="stock-producto" required placeholder="Ingrese el stock">
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-control" name="id-proveedor">
+                            <c:forEach items="${proveedores}" var="proveedor">
+                                <option value=${proveedor.proveedorId}>${proveedor.nombre}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
                 </div>
-                <div class="col-md-2">
-                    <input class="input-text" type="text" name="puntos-producto" required placeholder="Ingrese los puntos requeridos">
-                </div>
-                <div class="col-md-3">
-                    <select class="form-control" name="id-proveedor">
-                        <c:forEach items="${proveedores}" var="proveedor">
-                            <option value=${proveedor.proveedorId}>${proveedor.nombre}</option>
-                        </c:forEach>
-                    </select>
-                </div>
-                <div class="col-md-2">
-                    <input class="input-text" type="submit" value="Agregar">
+                <div class="row">
+                    <div class="col-md-2">
+                        <input class="input-text" type="submit" value="Agregar">
+                    </div>
                 </div>
             </div>
         </form>

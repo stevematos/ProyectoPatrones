@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,29 +22,33 @@
         <h1><b>ELIMINAR PRODUCTOS DE CANJE</b></h1>
         <br>
         <br>
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-10">
-                <table>
-                    <tr>
-                        <th>¿ELIMINAR?</th>
-                        <th>CODIGO</th>
-                        <th>NOMBRE</th>
-                        <th>PUNTOS REQUERIDOS</th>
-                    </tr>
-                    <tr>
-                        <td><!-- Aqui va el checkbox--></td>
-                        <td><!-- Aqui va el codigo--></td>
-                        <td><!-- Aqui va el nombre--></td>
-                        <td><!-- Aqui va los puntos--></td>
-                    </tr>
-                </table>
+        <form action="../ServletEliminarCanje" method="POST">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <table>
+                        <tr>
+                            <th>¿ELIMINAR?</th>
+                            <th>CODIGO</th>
+                            <th>NOMBRE</th>
+                            <th>PUNTOS REQUERIDOS</th>
+                        </tr>
+                        <c:forEach items="${premios}" var="premio">
+                            <tr>
+                                <td> <input type="checkbox" name="seleccionados" value="${premio.premioId}" > </td>
+                                <td>${premio.premioId}</td>
+                                <td>${premio.nombre}</td>
+                                <td>${premio.costoPuntos}</td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                </div>
             </div>
-        </div>
-        <br>
-        <br>
-        <form align="center">
-            <input type="submit" value="Eliminar">
+            <br>
+            <br>
+            <div class="row" align="center">
+                <input type="submit" value="Eliminar">
+            </div>
         </form>
     </body>
 </html>

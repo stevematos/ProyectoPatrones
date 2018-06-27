@@ -9,7 +9,6 @@ import edu.patrones.model.Premio;
 import edu.patrones.service.impl.PremioServiceImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -21,9 +20,9 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Steve
  */
-public class ServletAgregarCanje extends HttpServlet {
+public class ServletModificarCanje extends HttpServlet {
     
-    PremioServiceImpl dao=new PremioServiceImpl();
+    PremioServiceImpl service=new PremioServiceImpl();
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -37,28 +36,14 @@ public class ServletAgregarCanje extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       ArrayList<Premio> auxAgregar=(request.getSession().getAttribute("agregarAux")==null)?
-                new ArrayList<>():(ArrayList<Premio>)request.getSession().getAttribute("agregarAux");
-        Premio aux=new Premio(request.getParameter("codigo-producto"));
-        aux.setProveedorId(request.getParameter("id-proveedor"));
-        try{
-            Integer.parseInt(request.getParameter("puntos-producto"));
-            aux.setCostoPuntos(request.getParameter("puntos-producto"));
-        }catch(NumberFormatException ex){
-            aux.setCostoPuntos("0");
+        Premio premio=null;
+        try {
+           premio=service.listarPorId(request.getParameter("id"));
+        } catch (Exception ex) {
+            System.out.println(ex);
         }
-        aux.setNombre(request.getParameter("nombre-producto"));
-        try{
-            Integer.parseInt(request.getParameter("stock-producto"));
-            aux.setStock(request.getParameter("stock-producto"));
-        }catch(NumberFormatException ex){
-            aux.setStock("0");
-        }
-        aux.setImagen(request.getParameter("imagen-producto"));
-        aux.setObservacion(request.getParameter("observacion-producto"));
-        auxAgregar.add(aux);
-        request.getSession().setAttribute("agregarAux", auxAgregar);
-        response.sendRedirect(request.getContextPath() + "/jsp/AgregarCanje.jsp");
+        request.getSession().setAttribute("premioEditar", premio);
+        response.sendRedirect(request.getContextPath() + "/jsp/ModificarCanje.jsp");
     }
 
     /**
@@ -72,30 +57,23 @@ public class ServletAgregarCanje extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ArrayList<Premio> aux= (ArrayList<Premio>)request.getSession().getAttribute("agregarAux");
-        aux.forEach( premio -> {
+        Premio premio=(Premio)request.getSession().getAttribute("premioEditar");
+        if(premio!=null){
+            premio.setCostoPuntos(request.getParameter("puntos-producto"));
+            premio.setNombre(request.getParameter("nombre-producto"));
             try {
-                dao.agregar(premio);
+                service.actualizar(premio);
             } catch (Exception ex) {
                 System.out.println(ex);
             }
-        });
-        request.getSession().setAttribute("agregarAux",null);
-        response.sendRedirect(request.getContextPath() + "/jsp/AgregarCanje.jsp");
+            request.getSession().setAttribute("premios", service.getPremiosDisponibles());
+        }
+        response.sendRedirect(request.getContextPath() + "/jsp/ModificarCanje.jsp");
     }
 
     /**
      * Returns a short description of the servlet.
-     
-     * 
-     * Premio p1=new Premio(request.getParameter("codigo-producto"));
-        try {
-            dao.agregar(p1);
-            
-        } catch (Exception ex) {
-            System.out.println(ex);
-        }
-        * 
+     *
      * @return a String containing servlet description
      */
     @Override

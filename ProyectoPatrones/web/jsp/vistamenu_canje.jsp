@@ -30,7 +30,7 @@
                         <button onclick="handleClickHref('transaccioncanje');">Transacciones de canje</button>
                     </div>
                     <div class="col-md-6">
-                        <button onclick="handleClickHref('GestionarProductoCanje')">Gestionar Canje</button>
+                        <button onclick="handleClickHrefServlet('ServletGestionarCanje')">Gestionar Canje</button>
                     </div>
                 </div>
                 <div class="row">

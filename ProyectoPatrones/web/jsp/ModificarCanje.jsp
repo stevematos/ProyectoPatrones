@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,25 +30,33 @@
                         <th>CODIGO</th>
                         <th>NOMBRE</th>
                         <th>PUNTOS REQUERIDOS</th>
+                        <th></th>
                     </tr>
+                    <c:forEach items="${premios}" var="premio">
                     <tr>
-                        <td><!-- Aqui va el codigo--></td>
-                        <td><!-- Aqui va el nombre--></td>
-                        <td><!-- Aqui va los puntos--></td>
+                        <td>${premio.premioId}</td>
+                        <td>${premio.nombre}</td>
+                        <td>${premio.costoPuntos}</td>
+                        <td>
+                            <a  href="../ServletModificarCanje?method=doPost&id=${premio.premioId}"  >
+                             Editar
+                            </a>
+                        </td>
                     </tr>
+                    </c:forEach>
                 </table>
             </div>
         </div>
         <br>
         <br>
         <br>
-        <form>
+        <form action="../ServletModificarCanje" method="POST">
             <div class="row">
                 <div class="col-md-4">
-                    <input class="input-text" type="text" name="nombre-producto" required placeholder="Ingrese el código del producto">
+                    <input class="input-text" value="${premioEditar.nombre}" type="text" name="nombre-producto" required placeholder="Ingrese el código del producto">
                 </div>
                 <div class="col-md-4">
-                    <input class="input-text" type="text" name="puntos-producto" required placeholder="Ingrese los puntos requeridos">
+                    <input class="input-text" value="${premioEditar.costoPuntos}" type="text" name="puntos-producto" required placeholder="Ingrese los puntos requeridos">
                 </div>
                 <div class="col-md-2">
                 </div>

@@ -21,9 +21,7 @@ import java.util.Date;
  */
 public class probando {
     public static void main(String[] args) throws Exception {
-            PremioServiceImpl dao=new PremioServiceImpl();
-            dao.getPremiosDisponibles().forEach( premio ->
-                System.out.println(premio)
-            );
+            UsuarioServiceImpl dao=new UsuarioServiceImpl();
+            System.out.println(dao.listar());
     }
 }

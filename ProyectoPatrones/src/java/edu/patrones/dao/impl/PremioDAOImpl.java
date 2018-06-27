@@ -26,7 +26,7 @@ public class PremioDAOImpl implements IPremioDAO, Serializable {
 
 	@Override
 	public void agregar(Premio premio) throws SQLException{
-            String sql = "INSERT INTO PREMIO(premio_id, cargo_id, tipodoc_id, nombre, apepat, apemat, celular, nrodoc, estado, usuario_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO PREMIO(premio_id, proveedor_id, nombre, costo_puntos, stock, imagen, observacion) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement preparedStatement = cx.prepareStatement(sql);
             preparedStatement.setString(1, premio.getPremioId());
             preparedStatement.setString(2, premio.getProveedorId());

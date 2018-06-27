@@ -8,7 +8,7 @@
         String nombre = (String) session.getAttribute("nombre_usuario");
         String perfil = (String) session.getAttribute("perfil_usuario");
         String anterior = (String) session.getAttribute("pagina_anterior");
-	%>
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

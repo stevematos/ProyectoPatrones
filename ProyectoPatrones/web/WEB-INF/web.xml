@@ -28,6 +28,18 @@
         <servlet-name>ServletGestionarCanje_Agregar</servlet-name>
         <servlet-class>ServletSteve.ServletGestionarCanje_Agregar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletGestionarCanje</servlet-name>
+        <servlet-class>ServletSteve.ServletGestionarCanje</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletModificarCanje</servlet-name>
+        <servlet-class>ServletSteve.ServletModificarCanje</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletEliminarCanje</servlet-name>
+        <servlet-class>ServletSteve.ServletEliminarCanje</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletConsultaVentas</servlet-name>
         <url-pattern>/ServletConsultaVentas</url-pattern>
@@ -55,6 +67,18 @@
     <servlet-mapping>
         <servlet-name>ServletGestionarCanje_Agregar</servlet-name>
         <url-pattern>/ServletGestionarCanje_Agregar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletGestionarCanje</servlet-name>
+        <url-pattern>/ServletGestionarCanje</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletModificarCanje</servlet-name>
+        <url-pattern>/ServletModificarCanje</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletEliminarCanje</servlet-name>
+        <url-pattern>/ServletEliminarCanje</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

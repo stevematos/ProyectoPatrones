@@ -14,8 +14,7 @@
     // Recuperar LISTA DE USUARIOS
 
     UsuarioDAOImpl usudao = new UsuarioDAOImpl();
-    List<Usuario> Lista = new ArrayList<Usuario>();
-    Lista = usudao.listar();
+    List<Usuario> Lista = usudao.listar();
 
 %>
 <!DOCTYPE html>
