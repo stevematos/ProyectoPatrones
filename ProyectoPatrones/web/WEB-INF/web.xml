@@ -40,6 +40,14 @@
         <servlet-name>ServletEliminarCanje</servlet-name>
         <servlet-class>ServletSteve.ServletEliminarCanje</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletListar</servlet-name>
+        <servlet-class>edu.patrones.controller.ServletListar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletEnviarId</servlet-name>
+        <servlet-class>edu.patrones.controller.ServletEnviarId</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletConsultaVentas</servlet-name>
         <url-pattern>/ServletConsultaVentas</url-pattern>
@@ -79,6 +87,14 @@
     <servlet-mapping>
         <servlet-name>ServletEliminarCanje</servlet-name>
         <url-pattern>/ServletEliminarCanje</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletListar</servlet-name>
+        <url-pattern>/ServletListar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletEnviarId</servlet-name>
+        <url-pattern>/ServletEnviarId</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

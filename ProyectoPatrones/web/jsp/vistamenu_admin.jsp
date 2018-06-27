@@ -24,14 +24,11 @@
                 <h1>DATOS DE USUARIO</h1>
             </div>
             <div class="row" id="Opciones">
-                
-                <div class="row">
-                    
-                    <div class="col-md-6">
-                        <button onclick="handleClickHref('GestionarUsuarios')">Gestionar Usuarios</button>
-                    </div>
-                </div>
+                <form align="center" action="../ServletListar" method="Post">
+                    <button type="submit">Gestionar Usuarios</button>
+                </form>
             </div>
         </div>
+        
     </body>
 </html>

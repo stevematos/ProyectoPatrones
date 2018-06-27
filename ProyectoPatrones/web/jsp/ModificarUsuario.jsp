@@ -13,31 +13,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
-    // Recuperar LISTA DE USUARIOS
+    // Recuperar 
 
-    UsuarioDAOImpl usudao = new UsuarioDAOImpl();
-    PerfilUsuarioDAOImpl perfusu = new PerfilUsuarioDAOImpl();
-    List<Usuario> Lista = new ArrayList<Usuario>();
     Usuario musu = new Usuario();
     PerfilUsuario mperfil = new PerfilUsuario();
-    Lista = usudao.listar();
-    String idusuario = null;
-    idusuario = request.getParameter("id");
-    System.out.println(idusuario);
-    if (idusuario != null) {
-        System.out.println("idusuariosss:" + idusuario);
-        musu = usudao.listarPorId(idusuario);
-        String idperfil = musu.getPerfilId();
-        mperfil = perfusu.listarPorId(idperfil);
-    } else {
-        musu = new Usuario();
-        musu.setNomUsuario("");
-        musu.setClveUsuario("");
-        musu.setUsuarioId("");
-        musu.setPerfilId("");
-        mperfil = new PerfilUsuario();
-        mperfil.setNombre("");
-    }
+    
+    musu = (Usuario)request.getAttribute("musu");
+    mperfil = (PerfilUsuario)request.getAttribute("mperfil");
 
 
 %>
@@ -69,24 +51,27 @@
                             <th>ESTADO</th>
                             <th></th>
                         </tr>
-                        <%  for (int i = 0; i < Lista.size(); i++) {
+                        <%  
+                             List<Usuario> Lista = (List) request.getSession().getAttribute("Lista");
 
-                                String id = Lista.get(i).getUsuarioId();
-                                String perfil = Lista.get(i).getPerfilId();
+                            for (Usuario i : Lista) {
+
+                                String id = i.getNomUsuario();
+                                String perfil = i.getPerfilId();
                                 String varEstado = "";
 
                                 String perfilm = perfil.trim();
                                 String nombreperfil = "";
-                                if (perfilm.equalsIgnoreCase("1")) {
+                                if (perfilm.equals("1")) {
                                     nombreperfil = "CLIENTE";
-                                } else if (perfilm.equalsIgnoreCase("2")) {
+                                } else if (perfilm.equals("2")) {
                                     nombreperfil = "ASISTENTE_VENTAS";
-                                } else if (perfilm.equalsIgnoreCase("3")) {
+                                } else if (perfilm.equals("3")) {
                                     nombreperfil = "ASISTENTE_CANJE";
-                                } else if (perfilm.equalsIgnoreCase("4")) {
+                                } else if (perfilm.equals("4")) {
                                     nombreperfil = "ADMINISTRADOR";
                                 }
-                                short estado = Lista.get(i).getEstado();
+                                short estado = i.getEstado();
                                 if (estado == 1) {
                                     varEstado = "ACTIVO";
                                 } else {
@@ -97,8 +82,8 @@
                         %>
                         <tr>
 
-                            <td align="center"><%=Lista.get(i).getNomUsuario()%></td>
-                            <td align="center"><%=Lista.get(i).getClveUsuario()%></td>
+                            <td align="center"><%=i.getNomUsuario()%></td>
+                            <td align="center"><%=i.getClveUsuario()%></td>
                             <td align="center"><%=nombreperfil%></td>
                             <td align="center"><%=varEstado%></td>
                             <td>
