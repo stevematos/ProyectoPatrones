@@ -20,7 +20,7 @@
                 <jsp:param name="usuario" value="Steve" />
                 <jsp:param name="tipo_usuario" value="Alumno_Prueba" />
             </jsp:include>
-            
+
             <div class="row">
                 <div class="col-md-2">
                     <label>NOMBRES</label>
@@ -34,17 +34,32 @@
                 <div class="col-md-2">
                     <input type="text" class="form-control" name="username" required="" >
                 </div>
-                
+
             </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2">
+                    <i>**1 punto == 1 céntimo**</i>
+                </div>
+            </div>
+            <br>
             <div class="row">
                 <div class="col-md-2">
                     <label>PUNTOS</label>
                 </div>
-            
+                <div class="col-md-2">
+                    <input type="text" class="form-control" name="username" required="" >
+                </div>
+
+                <div class="col-md-2">
+                    <label>EQUIVALENCIA (S/.)</label>
+                </div>
                 <div class="col-md-2">
                     <input type="text" class="form-control" name="username" required="" >
                 </div>
             </div>
+            <br>
+            <br>
             <div class="row">
                 <div class="col-md-2">
                     <label>MONTO TOTAL</label>
@@ -58,21 +73,21 @@
                 <div class="col-md-2">
                     <input type="text" class="form-control" name="username" required="" >
                 </div>
-                
+
             </div>
-           
-           
+
+            <br>
+
             <div class="row">
-                 <div class="col-md-2 ">
+                <div class="col-md-2 ">
                     <button >REALIZAR PAGO</button>
                 </div>
 
-                
+
                 <div class="col-md-2 col-md-offset-3">
                     <button >CANCELAR</button>
                 </div>
-                
-                
+
             </div>
         </div>
     </body>
