@@ -18,7 +18,6 @@ public class UsuarioServiceImpl implements IUsuarioService, Serializable {
 
     public UsuarioServiceImpl() {
         dao = new UsuarioDAOImpl();
-
     }
 
     @Override

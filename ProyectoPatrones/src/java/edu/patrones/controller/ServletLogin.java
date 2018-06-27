@@ -5,6 +5,7 @@
  */
 package edu.patrones.controller;
 
+import edu.patrones.front_controller.FrontController;
 import edu.patrones.model.PerfilUsuario;
 import edu.patrones.model.Usuario;
 import edu.patrones.service.impl.PerfilUsuarioServiceImpl;
@@ -64,10 +65,12 @@ public class ServletLogin extends HttpServlet {
             Usuario miusuario = new Usuario();
             PerfilUsuario mperfil = new PerfilUsuario();
 
-            String direccion = susu.validarUsuario(usuario, password);
-            System.out.println(direccion);
+            FrontController router=new FrontController();
+            String direccion=router.dispatchRequest(usuario, password);
             
             miusuario = susu.listarPorNom(usuario, password);
+            System.out.println(direccion);
+            
             String nombreusuario = miusuario.getNomUsuario();
 
             String idperfil = miusuario.getPerfilId();
@@ -82,11 +85,12 @@ public class ServletLogin extends HttpServlet {
             request.getSession().setAttribute("nombre_usuario", nombreusuario);
             request.getSession().setAttribute("perfil_usuario", perfilusuario);
             String menu="vistamenu_";
-            switch(perfilusuario){
-                case "ASISTENTE_VENTAS": menu+="ventas"; break;
-                case "ASISTENTE_CANJES":  menu+="canje"; break; 
-                case "ADMINISTRADOR":  menu+="admin"; break;
-            }
+            if(perfilusuario!=null)
+                switch(perfilusuario){
+                    case "ASISTENTE_VENTAS": menu+="ventas"; break;
+                    case "ASISTENTE_CANJES":  menu+="canje"; break; 
+                    case "ADMINISTRADOR":  menu+="admin"; break;
+                }
             request.getSession().setAttribute("vista_menu", menu);
             response.sendRedirect(direccion); 
 
