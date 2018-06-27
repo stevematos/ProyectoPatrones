@@ -4,8 +4,23 @@
     Author     : JuniorPC
 --%>
 
+<%@page import="edu.patrones.model.Usuario"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="edu.patrones.dao.impl.UsuarioDAOImpl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    // Recuperar LISTA DE USUARIOS
+
+    UsuarioDAOImpl usudao = new UsuarioDAOImpl();
+
+    List<Usuario> Lista = new ArrayList<Usuario>();
+
+    Lista = usudao.listar();
+
+
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -27,13 +42,46 @@
             <div class="col-md-8">
                 <table>
                     <tr>
-                        <th>PRODUCTOS</th>
-                        <th>PUNTOS REQUERIDOS</th>
+                        <th>NOMBRE</th>
+                        <th>PERFIL</th>
+                        <th>ESTADO</th>
                     </tr>
+                    <%  for (int i = 0; i < Lista.size(); i++) {
+
+                            String id = Lista.get(i).getUsuarioId();
+                            String perfil = Lista.get(i).getPerfilId();
+                            String varEstado="";
+
+                            String perfilm = perfil.trim();
+                            String nombreperfil = "";
+                            if (perfilm.equalsIgnoreCase("1")) {
+                                nombreperfil = "CLIENTE";
+                            } else if (perfilm.equalsIgnoreCase("2")) {
+                                nombreperfil = "ASISTENTE_VENTAS";
+                            } else if (perfilm.equalsIgnoreCase("3")) {
+                                nombreperfil = "ASISTENTE_CANJE";
+                            } else if (perfilm.equalsIgnoreCase("4")) {
+                                nombreperfil = "ADMINISTRADOR";
+                            }
+                            short estado =Lista.get(i).getEstado();
+                            if(estado == 1){
+                                varEstado="ACTIVO";
+                            }else{
+                                varEstado="INACTIVO";
+                            }
+
+
+
+                    %>
                     <tr>
-                        <td>TEXT 1</td>
-                        <td>TEXT 2</td>
-                    </tr>
+
+                        <td align="center"><%=Lista.get(i).getNomUsuario()%></td>
+                        <td align="center"><%=nombreperfil%></td>
+                        <td align="center"><%=varEstado%></td>
+                        
+
+                    </tr>    
+                    <% }%>
                 </table>
             </div>
         </div>
@@ -46,18 +94,18 @@
                 <br>
                 <div class="col-md-4" align="left">
                     <a href="./AgregarUsuario.jsp"><img class="imagen"
-                                                      src="https://image.flaticon.com/icons/png/512/94/94979.png"
-                                                      alt="Agregar Usuario"><br>Agregar Usuario</a>
+                                                        src="https://image.flaticon.com/icons/png/512/94/94979.png"
+                                                        alt="Agregar Usuario"><br>Agregar Usuario</a>
                 </div>
                 <div class="col-md-4" align="center">
                     <a href="./ModificarUsuario.jsp"><img class="imagen"
-                                                         src="https://www.shareicon.net/data/2015/09/17/642233_edit_512x512.png"
-                                                         alt="Modificar Usuario"><br>Modificar Usuario</a>
+                                                          src="https://www.shareicon.net/data/2015/09/17/642233_edit_512x512.png"
+                                                          alt="Modificar Usuario"><br>Modificar Usuario</a>
                 </div>
                 <div class="col-md-4" align="right">
                     <a href="./EliminarUsuario.jsp"><img class="imagen"
-                                                       src="https://image.flaticon.com/icons/png/512/51/51418.png"
-                                                       alt="Eliminar Usuario"><br>Eliminar Usuario</a>
+                                                         src="https://image.flaticon.com/icons/png/512/51/51418.png"
+                                                         alt="Eliminar Usuario"><br>Eliminar Usuario</a>
                 </div>
             </div>
         </div>
