@@ -68,9 +68,10 @@
             <div class="col-md-10">
                 <table>
                     <tr>
-                        <th>CODIGO</th>
-                        <th>NOMBRE</th>
-                        <th>PUNTOS REQUERIDOS</th>
+                        <th>NOMBRE DEL PRODUCTO</th>
+                        <th>PUNTOS</th>
+                        <th>STOCK</th>
+                        <th>PROVEEDOR</th>
                     </tr>
                     <c:forEach items="${agregarAux}" var="premioAux">
                         <tr>

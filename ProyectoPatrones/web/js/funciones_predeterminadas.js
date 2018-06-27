@@ -14,3 +14,8 @@ function handleClickHrefServlet(valor)
     texto = "../"+valor;
     window.location.href = texto;
 }
+
+function retroceder(paginas)
+{
+    history.back(paginas);
+}

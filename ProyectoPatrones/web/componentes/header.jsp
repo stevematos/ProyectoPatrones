@@ -4,10 +4,11 @@
     Author     : Steve
 --%>
 <%
-	
-        String nombre = (String) session.getAttribute("nombre_usuario");
-        String perfil = (String) session.getAttribute("perfil_usuario");
-        String anterior = (String) session.getAttribute("pagina_anterior");
+
+    String nombre = (String) session.getAttribute("nombre_usuario");
+    String perfil = (String) session.getAttribute("perfil_usuario");
+    String vista_menu = (String) session.getAttribute("vista_menu");
+    System.out.println(vista_menu);
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,15 +22,16 @@
         <div class="row">
             <div class="row" id="header">
                 <div class="col-md-4" id="home_tipousuario">
-                    <button id="boton_header" onclick="handleClickHref('login')">Home</button>
-                    
+                    <button id="boton_header" onclick="handleClickHref('login')">Cerrar Sesion</button>
+
                     <%
-                        if(anterior!=null){
+                        if (vista_menu != null) {
                     %>
-                    <button id="boton_header" onclick="handleClickHref(<%=anterior%>)">Atras</button>
+                    <button id="boton_header" onclick="handleClickHref('<%=vista_menu%>')">Home</button>
                     <%
                         }
                     %>
+                   
                     <label><%=perfil%></label>
                 </div>
                 <div class="col-md-2 col-md-offset-4" id="usuario">
