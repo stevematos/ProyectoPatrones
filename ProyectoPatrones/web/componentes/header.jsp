@@ -7,6 +7,7 @@
 	
         String nombre = (String) session.getAttribute("nombre_usuario");
         String perfil = (String) session.getAttribute("perfil_usuario");
+        String anterior = (String) session.getAttribute("pagina_anterior");
 	%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -21,6 +22,14 @@
             <div class="row" id="header">
                 <div class="col-md-4" id="home_tipousuario">
                     <button id="boton_header" onclick="handleClickHref('login')">Home</button>
+                    
+                    <%
+                        if(anterior!=null){
+                    %>
+                    <button id="boton_header" onclick="handleClickHref(<%=anterior%>)">Atras</button>
+                    <%
+                        }
+                    %>
                     <label><%=perfil%></label>
                 </div>
                 <div class="col-md-2 col-md-offset-4" id="usuario">

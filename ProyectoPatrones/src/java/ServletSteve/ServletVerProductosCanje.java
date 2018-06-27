@@ -7,8 +7,11 @@ package ServletSteve;
 
 import edu.patrones.service.impl.CanjeServiceImpl;
 import edu.patrones.service.impl.PremioServiceImpl;
+import edu.patrones.service.impl.ProveedorServiceImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ServletVerProductosCanje extends HttpServlet {
     PremioServiceImpl dao=new PremioServiceImpl();
+    ProveedorServiceImpl daoProveedor=new ProveedorServiceImpl();
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -35,6 +39,11 @@ public class ServletVerProductosCanje extends HttpServlet {
             throws ServletException, IOException {
         
         request.getSession().setAttribute("premios",dao.getPremiosDisponibles());
+        try {
+            request.getSession().setAttribute("proveedores", daoProveedor.listar());
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
         response.sendRedirect(request.getContextPath() + "/jsp/VerProductosCanje.jsp");
     }
 

@@ -20,6 +20,14 @@
         <servlet-name>ServletVerProductosCanje</servlet-name>
         <servlet-class>ServletSteve.ServletVerProductosCanje</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletAgregarCanje</servlet-name>
+        <servlet-class>ServletSteve.ServletAgregarCanje</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ServletGestionarCanje_Agregar</servlet-name>
+        <servlet-class>ServletSteve.ServletGestionarCanje_Agregar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletConsultaVentas</servlet-name>
         <url-pattern>/ServletConsultaVentas</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>ServletVerProductosCanje</servlet-name>
         <url-pattern>/ServletVerProductosCanje</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletAgregarCanje</servlet-name>
+        <url-pattern>/ServletAgregarCanje</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletGestionarCanje_Agregar</servlet-name>
+        <url-pattern>/ServletGestionarCanje_Agregar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

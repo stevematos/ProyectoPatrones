@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,16 +22,23 @@
         <h1><b>AGREGAR PRODUCTOS DE CANJE</b></h1>
         <br>
         <br>
-        <form>
+        <form action="../ServletAgregarCanje" method="GET">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <input class="input-text" type="text" name="codigo-producto" required placeholder="Ingrese el código del producto">
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <input class="input-text" type="text" name="nombre-producto" required placeholder="Ingrese el nombre del producto">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <input class="input-text" type="text" name="puntos-producto" required placeholder="Ingrese los puntos requeridos">
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control" name="id-proveedor">
+                        <c:forEach items="${proveedores}" var="proveedor">
+                            <option value=${proveedor.proveedorId}>${proveedor.nombre}</option>
+                        </c:forEach>
+                    </select>
                 </div>
                 <div class="col-md-2">
                     <input class="input-text" type="submit" value="Agregar">
@@ -49,16 +57,18 @@
                         <th>NOMBRE</th>
                         <th>PUNTOS REQUERIDOS</th>
                     </tr>
-                    <tr>
-                        <td><!-- Aqui va el codigo--></td>
-                        <td><!-- Aqui va el nombre--></td>
-                        <td><!-- Aqui va los puntos--></td>
-                    </tr>
+                    <c:forEach items="${agregarAux}" var="premioAux">
+                        <tr>
+                            <td>${premioAux.premioId}</td>
+                            <td>${premioAux.nombre}</td>
+                            <td>${premioAux.costoPuntos}</td>
+                        </tr>
+                    </c:forEach>
                 </table>
             </div>
         </div>
         <br>
-        <form align="center">
+        <form align="center" action="../ServletAgregarCanje" method="POST">
             <input type="submit" value="CONFIRMAR">
         </form>
     </body>
