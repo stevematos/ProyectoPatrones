@@ -140,5 +140,25 @@ public class UsuarioDAOImpl implements IUsuarioDAO, Serializable {
 		}
 		return usuario;
 	}
+        @Override
+	public Integer contarRegistros() {
+		Integer contador = 0;
+
+		try {
+			Statement statement = cx.createStatement();
+			ResultSet resultSet = statement.executeQuery("select count(*) from Usuario");
+			while (resultSet.next()) {
+				 contador = resultSet.getInt("count");
+                                 
+			}
+                        System.out.println(contador);
+			resultSet.close();
+			statement.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return contador;
+	}
+        
 
 }
