@@ -4,8 +4,25 @@
     Author     : JuniorPC
 --%>
 
+<%@page import="edu.patrones.dao.impl.UsuarioDAOImpl"%>
+<%@page import="edu.patrones.model.Usuario"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    // Recuperar LISTA DE USUARIOS
+
+    UsuarioDAOImpl usudao = new UsuarioDAOImpl();
+    
+    List<Usuario> Lista = new ArrayList<Usuario>();
+    
+    Lista = usudao.listar();
+    
+    
+    
+
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -25,25 +42,51 @@
             <div class="col-md-1"></div>
             <div class="col-md-10">
                 <table>
-                    <tr>
-                        <th>NOMBRE</th>
-                        
-                        <th>PERFIL</th>
-                    </tr>
-                    <tr>
-                        <td><!-- Aqui va--></td>
-                        <td><!-- Aqui va--></td>
-                        <td><!-- Aqui va--></td>
-                        <td><!-- Aqui va--></td>
-                        <td><!-- Aqui va--></td>
-                    </tr>
-                </table>
+                        <tr>
+                            <th>NOMBRE</th>
+                            <th>PERFIL</th>
+                            <th></th>
+                        </tr>
+                        <%  for (int i = 0; i < Lista.size(); i++) {
+
+                                String id = Lista.get(i).getUsuarioId();
+                                String perfil = Lista.get(i).getPerfilId();
+
+                                String perfilm = perfil.trim();
+                                String nombreperfil = "";
+                                if (perfilm.equalsIgnoreCase("1")) {
+                                    nombreperfil = "CLIENTE";
+                                } else if (perfilm.equalsIgnoreCase("2")) {
+                                    nombreperfil = "ASISTENTE_VENTAS";
+                                } else if (perfilm.equalsIgnoreCase("3")) {
+                                    nombreperfil = "ASISTENTE_CANJE";
+                                } else if (perfilm.equalsIgnoreCase("4")) {
+                                    nombreperfil = "ADMINISTRADOR";
+                                }
+
+
+                        %>
+                        <tr>
+
+                            <td align="center"><%=Lista.get(i).getNomUsuario()%></td>
+                            <td align="center"><%=nombreperfil%></td>
+                            <td>
+                                <a  href="../ServletEliminarUsuario?id=<%=id%>"  >
+                                    Eliminar
+                                </a>
+                            </td>
+
+                        </tr>    
+                        <% }%>
+                    </table>
             </div>
         </div>
         <br>
         <br>
-        <form align="center">
-            <input type="submit" value="Eliminar">
+        <br>
+        <form align="center" action="GestionarUsuarios.jsp">
+            <input type="submit" value="CONFIRMAR">
         </form>
+        
     </body>
 </html>

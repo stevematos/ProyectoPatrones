@@ -16,6 +16,7 @@
     UsuarioDAOImpl usudao = new UsuarioDAOImpl();
     List<Usuario> Lista = new ArrayList<Usuario>();
     Lista = usudao.listar();
+    System.out.println("Lista:"+Lista);
 
 %>
 <!DOCTYPE html>
@@ -102,7 +103,7 @@
                                  nombreperfil = "ADMINISTRADOR";
                             }
                             
-                            
+                            System.out.println(nombreperfil);
 
                     %>
                     <tr>
@@ -117,7 +118,7 @@
             </div>
         </div>
         <br>
-        <form align="center">
+        <form align="center" action="GestionarUsuarios.jsp">
             <input type="submit" value="CONFIRMAR">
         </form>
     </body>
