@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -32,10 +33,12 @@
                         <th>PRODUCTOS</th>
                         <th>PUNTOS REQUERIDOS</th>
                     </tr>
-                    <tr>
-                        <td>TEXT 1</td>
-                        <td>TEXT 2</td>
-                    </tr>
+                    <c:forEach items="${premios}" var="premio">
+                    <tr class="active">
+                        <td>${premio.nombre}</td>
+                        <td>${premio.costoPuntos}</td>
+                    </tr>  
+                    </c:forEach>
                 </table>
             </div>
         </div>

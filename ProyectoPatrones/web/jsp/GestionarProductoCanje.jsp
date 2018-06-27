@@ -23,7 +23,7 @@
                 <hr>
                 <br>
                 <div class="col-md-4" align="left">
-                    <a href="./AgregarCanje.jsp"><img class="imagen"
+                    <a href="../ServletGestionarCanje_Agregar?method=doGet"><img class="imagen"
                                                       src="https://cdn.icon-icons.com/icons2/1369/PNG/512/-create-new-folder_90671.png"
                                                       alt="Agregar Canje"><br>Agregar Canje</a>
                 </div>

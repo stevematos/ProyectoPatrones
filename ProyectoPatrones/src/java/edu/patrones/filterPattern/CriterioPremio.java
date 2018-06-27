@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.patrones.service;
+package edu.patrones.filterPattern;
 
 import edu.patrones.model.Premio;
 import java.util.List;
 
 /**
  *
- * @author Jhunior Cuadros
+ * @author Steve
  */
-public interface IPremioService extends IService<Premio>{
-    public List<Premio> getPremiosDisponibles();
+public interface CriterioPremio {
+    public List<Premio> DisponibilidadCriterioList(List<Premio> premios);
 }

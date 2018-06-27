@@ -72,5 +72,11 @@ public class UsuarioServiceImpl implements IUsuarioService, Serializable {
         
         return musuario;
     }
+    
+    public Integer obtenerId(){
+        Integer cantidad = dao.contarRegistros();
+        Integer id = cantidad+1;
+        return id;
+    }
 
 }

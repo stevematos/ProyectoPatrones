@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Juan Carlos
  */
-public class ServletUsuario extends HttpServlet {
+public class ServletEliminarUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,10 +39,10 @@ public class ServletUsuario extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServletUsuario</title>");
+            out.println("<title>Servlet ServletEliminarUsuario</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ServletUsuario at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ServletEliminarUsuario at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,7 +60,18 @@ public class ServletUsuario extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            UsuarioServiceImpl susu = new UsuarioServiceImpl();
+            Usuario musu = new Usuario();
+
+            String codigo = request.getParameter("id");
+            susu.eliminar(codigo);
+
+            response.sendRedirect("jsp/EliminarUsuario.jsp");
+
+        } catch (Exception ex) {
+            Logger.getLogger(ServletEliminarUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -74,48 +85,7 @@ public class ServletUsuario extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        try {
-
-            UsuarioServiceImpl susu = new UsuarioServiceImpl();
-            Usuario musu = new Usuario();
-
-            String usuario = request.getParameter("nombre-usuario");
-            String password = request.getParameter("passw-usuario");
-            String perfil = request.getParameter("perfil-usuario");
-            String estado = request.getParameter("estado-usuario");
-
-            System.out.println(estado);
-            
-            Integer nuevoId = susu.obtenerId();
-            musu.setUsuarioId(nuevoId.toString());
-            musu.setClveUsuario(password);
-            musu.setNomUsuario(usuario);
-            
-            if(perfil.equalsIgnoreCase("ADMINISTRADOR")){
-                musu.setPerfilId("4");
-            }else if (perfil.equalsIgnoreCase("ASISTENTE_VENTAS")) {
-                musu.setPerfilId("2");
-            }else if (perfil.equalsIgnoreCase("ASISTENTE_CANJE")) {
-                musu.setPerfilId("3");
-            }
-            
-            if(estado.equalsIgnoreCase("on")){
-                musu.setEstado((short)1);
-            }else{
-                musu.setEstado((short)0);
-            }
-            
-            
-            
-            susu.agregar(musu);
-
-            response.sendRedirect("jsp/AgregarUsuario.jsp");
-
-        } catch (Exception ex) {
-            Logger.getLogger(ServletUsuario.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
+        
     }
 
     /**

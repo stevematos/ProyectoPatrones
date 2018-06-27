@@ -1,0 +1,7 @@
+MI ALGORITMO :'c
+ try {
+            return listar().stream().filter(premio-> Integer.parseInt(premio.getStock().trim())>0).collect(Collectors.toList());
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        return null;

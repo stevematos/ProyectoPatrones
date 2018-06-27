@@ -10,5 +10,6 @@ import edu.patrones.model.Usuario;
 public interface IUsuarioDAO extends IDAO<Usuario>{
     
     public Usuario ValidarUsuario(String nombre, String contraseña);
+    public Integer contarRegistros();
     
 }

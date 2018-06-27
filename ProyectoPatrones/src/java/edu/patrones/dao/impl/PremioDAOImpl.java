@@ -11,6 +11,7 @@ import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,22 +25,19 @@ public class PremioDAOImpl implements IPremioDAO, Serializable {
 	}
 
 	@Override
-	public void agregar(Premio premio) {
-		try {
-			String sql = "INSERT INTO PREMIO(premio_id, cargo_id, tipodoc_id, nombre, apepat, apemat, celular, nrodoc, estado, usuario_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-			PreparedStatement preparedStatement = cx.prepareStatement(sql);
-			preparedStatement.setString(1, premio.getPremioId());
-                        preparedStatement.setString(2, premio.getProveedorId());
-			preparedStatement.setString(3, premio.getNombre());
-                        preparedStatement.setString(4, premio.getCostoPuntos());
-                        preparedStatement.setString(5, premio.getStock());
-                        preparedStatement.setString(6, premio.getImagen());
-                        preparedStatement.setString(7, premio.getObservacion());
-			preparedStatement.executeUpdate();
-			preparedStatement.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public void agregar(Premio premio) throws SQLException{
+            String sql = "INSERT INTO PREMIO(premio_id, proveedor_id, nombre, costo_puntos, stock, imagen, observacion) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            PreparedStatement preparedStatement = cx.prepareStatement(sql);
+            preparedStatement.setString(1, premio.getPremioId());
+            preparedStatement.setString(2, premio.getProveedorId());
+            preparedStatement.setString(3, premio.getNombre());
+            preparedStatement.setString(4, premio.getCostoPuntos());
+            preparedStatement.setString(5, premio.getStock());
+            preparedStatement.setString(6, premio.getImagen());
+            preparedStatement.setString(7, premio.getObservacion());
+            preparedStatement.executeUpdate();
+            preparedStatement.close();
+		
 	}
 
 	@Override

@@ -23,6 +23,7 @@
             <div class="row">
                 <h3 id="titulo">TRANSACCIONES DE VENTA</h3>
             </div>
+            <br>
             <div class="row">
                 <div class="col-md-2">
                     <label>NUMERO DE TARJETA</label>
@@ -41,24 +42,8 @@
                 </div>
             </div>
             
-            <div class="row"  id="div_tabla">
-                <table  class="table table-bordered">
-                    <tr class="active">
-                        <td>PRODUCTO</td>
-                        <td>PRECIO</td>
-                        <td>CANTIDAD</td>
-                        <td>MONTO</td>
-                        <td>PUNTOS</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
+            <br>
+            
             <div class="row">
                 <div class="col-md-1">
                     <label>MONTO TOTAL </label>
@@ -67,7 +52,7 @@
                     <input type="text" class="form-control" name="username" required="" >
                 </div>
                 <div class="col-md-2 col-md-offset-3">
-                    <button >PAGO NORMAL</button>
+                    <button onclick="handleClickHref('Pago');">PAGO NORMAL</button>
                 </div>
                 <div class="col-md-2 col-md-offset-1">
                     <button onclick="handleClickHref('TransaccionPuntos');">TRANSACCION CON PUNTOS</button>
