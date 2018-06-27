@@ -8,6 +8,10 @@
         <servlet-name>ServletUsuario</servlet-name>
         <servlet-class>edu.patrones.controller.ServletUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletActualizarUsuario</servlet-name>
+        <servlet-class>edu.patrones.controller.ServletActualizarUsuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletLogin</servlet-name>
         <url-pattern>/ServletLogin</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ServletUsuario</servlet-name>
         <url-pattern>/ServletUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletActualizarUsuario</servlet-name>
+        <url-pattern>/ServletActualizarUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
