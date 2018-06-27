@@ -7,6 +7,8 @@ package edu.patrones.service.impl;
 
 import edu.patrones.dao.IPremioDAO;
 import edu.patrones.dao.impl.PremioDAOImpl;
+import edu.patrones.filterPattern.CriterioPremio;
+import edu.patrones.filterPattern.CriterioPremioDisponibilidad;
 import edu.patrones.model.Premio;
 import edu.patrones.service.IPremioService;
 import java.io.Serializable;
@@ -50,10 +52,11 @@ public class PremioServiceImpl implements IPremioService, Serializable{
 
     @Override
     public List<Premio> getPremiosDisponibles() {
+        CriterioPremio criterio=new CriterioPremioDisponibilidad();
         try {
-            return listar().stream().filter(premio-> Integer.parseInt(premio.getStock().trim())>0).collect(Collectors.toList());
+           return criterio.DisponibilidadCriterioList(dao.listar());
         } catch (Exception ex) {
-            System.out.println(ex);
+            Logger.getLogger(PremioServiceImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }

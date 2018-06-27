@@ -1,0 +1,8 @@
+-Patrons singleton :Base de datos
+-Template: DAO
+-DAO 
+-MVC: estructura del proyecto
+-composity : jsp:include
+-patron filter o de criterio
+-patron facade
+-patron adapter
