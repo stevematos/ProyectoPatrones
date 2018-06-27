@@ -35,7 +35,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <button onclick="handleClickHref('VerProductosCanje')">Ver Productos Canje</button>
+                        <button onclick="handleClickHrefServlet('ServletVerProductosCanje')">Ver Productos Canje</button>
                     </div>
                     
                 </div>

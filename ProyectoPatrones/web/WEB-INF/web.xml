@@ -16,6 +16,10 @@
         <servlet-name>ServletActualizarUsuario</servlet-name>
         <servlet-class>edu.patrones.controller.ServletActualizarUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletVerProductosCanje</servlet-name>
+        <servlet-class>ServletSteve.ServletVerProductosCanje</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletConsultaVentas</servlet-name>
         <url-pattern>/ServletConsultaVentas</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>ServletActualizarUsuario</servlet-name>
         <url-pattern>/ServletActualizarUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletVerProductosCanje</servlet-name>
+        <url-pattern>/ServletVerProductosCanje</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

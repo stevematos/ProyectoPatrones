@@ -9,3 +9,8 @@ function handleClickHref(valor)
     window.location.href = texto;
 }
 
+function handleClickHrefServlet(valor)
+{
+    texto = "../"+valor;
+    window.location.href = texto;
+}

@@ -11,6 +11,9 @@ import edu.patrones.model.Premio;
 import edu.patrones.service.IPremioService;
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 public class PremioServiceImpl implements IPremioService, Serializable{
 
@@ -43,6 +46,16 @@ public class PremioServiceImpl implements IPremioService, Serializable{
     @Override
     public Premio listarPorId(String id) throws Exception {
         return dao.listarPorId(id);
+    }
+
+    @Override
+    public List<Premio> getPremiosDisponibles() {
+        try {
+            return listar().stream().filter(premio-> Integer.parseInt(premio.getStock().trim())>0).collect(Collectors.toList());
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        return null;
     }
     
 }

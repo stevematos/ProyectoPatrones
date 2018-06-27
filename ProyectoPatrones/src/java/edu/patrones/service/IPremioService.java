@@ -6,11 +6,12 @@
 package edu.patrones.service;
 
 import edu.patrones.model.Premio;
+import java.util.List;
 
 /**
  *
  * @author Jhunior Cuadros
  */
 public interface IPremioService extends IService<Premio>{
-    
+    public List<Premio> getPremiosDisponibles();
 }

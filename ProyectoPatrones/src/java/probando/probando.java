@@ -9,6 +9,7 @@ import edu.patrones.dao.impl.Conexion;
 import edu.patrones.dao.impl.UsuarioDAOImpl;
 import edu.patrones.service.impl.CanjeServiceImpl;
 import edu.patrones.service.impl.CargoServiceImpl;
+import edu.patrones.service.impl.PremioServiceImpl;
 import edu.patrones.service.impl.UsuarioServiceImpl;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -20,7 +21,9 @@ import java.util.Date;
  */
 public class probando {
     public static void main(String[] args) throws Exception {
-            UsuarioServiceImpl dao=new UsuarioServiceImpl();
-            System.out.println(dao.listar());
+            PremioServiceImpl dao=new PremioServiceImpl();
+            dao.getPremiosDisponibles().forEach( premio ->
+                System.out.println(premio)
+            );
     }
 }
