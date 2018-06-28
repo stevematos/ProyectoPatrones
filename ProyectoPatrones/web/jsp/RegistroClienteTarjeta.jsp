@@ -21,13 +21,13 @@
         </jsp:include>
         <h1><b>REGISTRO CLIENTE/TARJETA</b></h1>
         
-        <form>
+        <form action="../ServletRegistroClienteTarjeta">
             <h3><b>Cliente</b></h3>
             
             <div class="row">
                 <div class="col-md-4"> 
                     <q>¿Existe el cliente?</q>
-                    <input type="checkbox" id="checkCliente" onclick="existeCliente()"> 
+                    <input type="checkbox" id="checkCliente" name="existe" onclick="existeCliente()"> 
                 </div>
             </div>
             <br>
@@ -46,7 +46,7 @@
             <br>
             <div class="row">
                 <div class="col-md-4">
-                    <select name="tipodocumento-cliente" class="input-text">
+                    <select name="tipodocumento-cliente" class="input-text" required>
                         <option value="x">Tipo Documento</option>
                     </select>
                 </div>
@@ -62,6 +62,9 @@
             <h3><b>Tarjeta</b></h3>
             <br>
             <div class="row">
+                <div class="col-md-4">
+                    <input class="input-text" type="text" name="id-tarjeta" required placeholder="Ingrese el id de la tarjeta">
+                </div>
                 <div class="col-md-4">
                     <input class="input-text" type="text" name="numero-tarjeta" required placeholder="Ingrese el nuemro de la tarjeta">
                 </div>
