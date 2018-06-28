@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <select name="tipodocumento-cliente" class="input-text" required>
-                        <option value="x">Tipo Documento</option>
+                        <option value="1">DNI</option>
                     </select>
                 </div>
                 <div class="col-md-4">
